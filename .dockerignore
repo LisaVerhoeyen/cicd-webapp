@@ -1,0 +1,7 @@
+# node modules
+node_modules
+
+# docker files
+docker-compose-sqlite.yml
+docker-compose.yml
+Dockerfile
