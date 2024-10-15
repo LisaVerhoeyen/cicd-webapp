@@ -16,6 +16,7 @@ jobs:
           node-version: 20
       - name: install the dependencies
         run: yarn install
-      - name: lint the project
+      - name: fix linting config
         run: npx @eslint/migrate-config .eslintrc.json
+      - name: lint the project
         run: yarn eslint .
