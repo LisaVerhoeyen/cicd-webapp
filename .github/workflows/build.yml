@@ -17,4 +17,5 @@ jobs:
       - name: install the dependencies
         run: yarn install
       - name: lint the project
-        run: yarn lint
+        run: npx @eslint/migrate-config .eslintrc.json
+        run: yarn eslint .
