@@ -18,5 +18,7 @@ jobs:
         run: yarn install
       - name: fix linting config
         run: npx @eslint/migrate-config .eslintrc.json
+      - name: fix possible linting errors
+        run: yarn eslint . --fix
       - name: lint the project
         run: yarn eslint .
