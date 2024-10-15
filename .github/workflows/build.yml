@@ -22,3 +22,21 @@ jobs:
         run: yarn eslint . --fix
       - name: lint the project
         run: yarn eslint .
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: set up QEMU
+        uses: docker/setup-qemu-action@v3
+      - name: set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: build
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+          tags: lisverhoeyen/webapp:latest
