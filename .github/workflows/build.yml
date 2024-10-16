@@ -22,9 +22,6 @@ jobs:
         run: yarn eslint . --fix
       - name: lint the project
         run: yarn eslint .
-  docker:
-    runs-on: ubuntu-latest
-    steps:
       - name: set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: set up Docker Buildx
