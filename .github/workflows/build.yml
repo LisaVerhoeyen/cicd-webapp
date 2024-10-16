@@ -34,5 +34,5 @@ jobs:
       - name: build
         uses: docker/build-push-action@v6
         with:
-          push: false
+          push: true
           tags: lisverhoeyen/webapp:latest
