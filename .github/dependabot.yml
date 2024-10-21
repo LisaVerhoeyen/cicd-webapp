@@ -1,5 +1,4 @@
 version: 2
-on: "push"
 updates:
 - package-ecosystem: "github-actions"
   directory: "/"
