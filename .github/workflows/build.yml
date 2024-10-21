@@ -11,7 +11,7 @@ jobs:
       - name: check repository code
         uses: actions/checkout@v4
       - name: install NodeJS
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20
       - name: install the dependencies
