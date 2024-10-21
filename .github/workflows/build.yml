@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check repository code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
       - name: install NodeJS
         uses: actions/setup-node@v3
         with:
